@@ -4,8 +4,8 @@ class BbcHomepage
   include Capybara::DSL
 
   # Page Objects
-  HOMEPAGE_URL = 'https://www.bbc.co.uk/'
-  SIGN_IN_LINK_ID = '#idcta-link'
+  HOMEPAGE_URL = 'https://www.bbc.co.uk/' unless const_defined?(:HOMEPAGE_URL)
+  SIGN_IN_LINK_ID = '#idcta-link' unless const_defined?(:SIGN_IN_LINK_ID)
 
   def visit_home_page
     visit(HOMEPAGE_URL)

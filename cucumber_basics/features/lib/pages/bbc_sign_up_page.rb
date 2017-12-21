@@ -3,16 +3,16 @@ require 'capybara/dsl'
 class BbcSignUpPage
  include Capybara::DSL
 
- DAY_FIELD_ID = 'day-input'
- MONTH_FIELD_ID = 'month-input'
- YEAR_FIELD_ID = 'year-input'
- SUBMIT_BUTTON_ID = 'submit-button'
- EMAIL_FIELD_ID = 'user-identifier-input'
- PASSWORD_FIELD_ID = 'password-input'
- POSTCODE_FIELD_ID = 'postcode-input'
- ALREADY_USED_EMAIL_ERROR_ID = 'form-message-email'
- INCORRECT_PASSWORD_ERROR_ID = 'form-message-password'
- SIGN_IN_MESSAGE_SUCCESSFUL = 'h1 span'
+ DAY_FIELD_ID = 'day-input' unless const_defined?(:DAY_FIELD_ID)
+ MONTH_FIELD_ID = 'month-input' unless const_defined?(:MONTH_FIELD_ID)
+ YEAR_FIELD_ID = 'year-input' unless const_defined?(:YEAR_FIELD_ID)
+ SUBMIT_BUTTON_ID = 'submit-button' unless const_defined?(:SUBMIT_BUTTON_ID)
+ EMAIL_FIELD_ID = 'user-identifier-input' unless const_defined?(:EMAIL_FIELD_ID)
+ PASSWORD_FIELD_ID = 'password-input' unless const_defined?(:PASSWORD_FIELD_ID)
+ POSTCODE_FIELD_ID = 'postcode-input' unless const_defined?(:POSTCODE_FIELD_ID)
+ ALREADY_USED_EMAIL_ERROR_ID = 'form-message-email' unless const_defined?(:ALREADY_USED_EMAIL_ERROR_ID)
+ INCORRECT_PASSWORD_ERROR_ID = 'form-message-password' unless const_defined?(:INCORRECT_PASSWORD_ERROR_ID)
+ SIGN_IN_MESSAGE_SUCCESSFUL = 'h1 span' unless const_defined?(:SIGN_IN_MESSAGE_SUCCESSFUL)
 
   def day_field
     find_field(DAY_FIELD_ID)
